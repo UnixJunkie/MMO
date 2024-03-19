@@ -1,0 +1,32 @@
+opam-version: "2.0"
+authors: "Francois Berenger"
+maintainer: "unixjunkie@sdf.org"
+homepage: "https://github.com/UnixJunkie/MMO"
+bug-reports: "https://github.com/UnixJunkie/MMO/issues"
+dev-repo: "git+https://github.com/UnixJunkie/MMO.git"
+license: "BSD-3-Clause"
+build: ["dune" "build" "-p" name "-j" jobs]
+depends: [
+  "batteries" {>= "3.5.0"}
+  "bst" {>= "2.0.0"}
+  "dolog" {>= "5.0.0"}
+  "dune" {>= "1.11"}
+  "line_oriented"
+  "minicli" {>= "5.0.0"}
+  "ocaml" {>= "4.14.1"}
+  "parany" {>= "14.0.0"}
+  "vector3"
+  "gg"
+  "base-bigarray"
+  "genspir"
+  "bitv"
+  "pyml"
+  "ocamlgraph"
+  "cppo"
+  "nlopt"
+  "cpm"
+  # only if rebuilding the python bindings
+  # "pyml_bindgen"
+  # "ocamlformat"
+]
+synopsis: "Molecular Mechanics in OCaml"

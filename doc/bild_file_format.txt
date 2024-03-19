@@ -1,0 +1,99 @@
+BILD format (from https://www.cgl.ucsf.edu/chimera/docs/UsersGuide/bild.html)
+
+BILD is a simple text format that describes lines, polygons, and geometric primitives such as spheres, boxes, cylinders, and cones with commands (see example.bild and XYZ-axes.bild). Character strings can also be included. The commands are used to generate a VRML model in Chimera. The objects can be specified in absolute coordinates and/or transformed and scaled coordinates. See also: shape, define, geometric objects, Chimera_BILD (a third-party plug-in for using BILD in the command line)
+
+This file type is indicated by the filename suffix .bild or .bld, or by using bild:filename in the command line.
+
+Curved objects (spheres, cones, and cylinders) read from BILD format are described as perfectly smooth in exported files, but display within Chimera uses planar facets. The number of facets and the apparent smoothness can be increased by raising the subdivision level with the Effects tool or the set command.
+BILD Commands
+
+Square brackets denote optional parameters.
+
+    .arrow x1 y1 z1 x2 y2 z2 [r1 [r2 [rho]]]
+    Draw an arrow from (x1, y1, z1) to (x2, y2, z2). An arrow consists of a cylinder stretching from the initial point to an intermediary junction, and a cone stretching from the junction to the final point. The radius of the cylinder is r1 (default 0.1), the radius of the base of the cone is r2 (default 4*r1), and the fraction of the total distance taken up by the cylinder is rho (default 0.75). 
+
+    .box x1 y1 z1 x2 y2 z2
+    Draw a box with opposite corners at (x1, y1, z1) and (x2, y2, z2). 
+
+    .color name
+    or
+    .color r g b
+    Set the color of subsequently defined items. The name can be a built-in name, a name defined previously with colordef, or an integer that refers to the old BILD color wheel (0-65, inclusive). Alternatively, a color can be described by its red (r), green (g), and blue (b) components, each in the range 0-1, inclusive. Any transparency in the color is ignored, but transparency can be set separately. 
+
+    .cmov x y z
+    Define the starting location of the next character string. Lines in the BILD file that do not start with a period (.) are character strings to be displayed. See also .font. 
+
+    .comment text
+    User comment line (ignored during object creation). 
+
+    .cone x1 y1 z1 x2 y2 z2 r [open]
+    Draw a cone with a base of radius r centered at (x1, y1, z1) and a tip at (x2, y2, z2). If the keyword open is present, the base of the cone will be invisible. 
+
+    .cylinder x1 y1 z1 x2 y2 z2 r [open]
+    Draw a cylinder with radius r and bases centered at (x1, y1, z1) and (x2, y2, z2). If the keyword open is present, the bases of the cylinder will be invisible. 
+
+    .dotat x y z
+    or
+    .dot x y z
+    Draw a sphere of unit radius centered at (x, y, z). The sphere center is treated as a vertex if there is a subsequent .draw, .drawrel, or .moverel command. 
+
+    .draw x y z
+    or
+    .d x y z
+    Add another vertex to the current set of line segments. A line will be drawn from the previous vertex to this vertex at (x, y, z). There should be a prior .move, .moverel, .dotat, or .marker command (these initiate sets of line segments). 
+
+    .drawrel dx dy dz
+    or
+    .dr dx dy dz
+    Add another vertex to the current set of line segments. A line will be drawn from the previous vertex at (x, y, z) to this vertex at (x + dx, y + dy, z + dz). 
+
+    .font fontname pointsize [fontstyle]
+    Set the font, font size, and font style of subsequent character strings. Lines in the BILD file that do not start with a period (.) are character strings to be displayed. Options for fontname include: Times, Helvetica, Courier, SERIF, SANS, TYPEWRITER. Options for fontstyle: plain, bold, italic, bold italic. See also .cmov. 
+
+    .marker x y z
+    Draw a box of unit cubic diagonal centered at (x, y, z), i.e., a box with opposite corners at (x – 0.5, y – 0.5, z – 0.5) and (x + 0.5, y + 0.5, z + 0.5). The box center is treated as a vertex if there is a subsequent .draw, .drawrel, or .moverel command. 
+
+    .move x y z
+    or
+    .m x y z
+    Start a new set of line segments whose first vertex is at (x, y, z). 
+
+    .moverel dx dy dz
+    or
+    .mr dx dy dz
+    Start a new set of line segments whose first vertex is at (x + dz, y + dy, z + dz), where (x, y, z) is the coordinate of the last vertex defined. 
+
+    .polygon x1 y1 z1 x2 y2 z2 ... xN yN zN
+    Draw a flat polygon with vertices at (x1, y1, z1), (x2, y2, z2), ..., (xN, yN, zN). 
+
+    .pop
+    Discard the most recent transformation (rotation, scaling, or translation) from the transformation stack. 
+
+    .rotate angle axis
+    or
+    .rot angle axis
+    Rotate all subsequent coordinates by angle degrees about the given axis. The axis can be given as a single letter (x, y, or z) or as three numbers defining an arbitrary vector: xa ya za. This transformation is added to the top of the transformation stack. 
+
+    .scale xscale [yscale [zscale]]
+    Scale all subsequent coordinates by the given factor(s). The x coordinates will be scaled by xscale, y coordinates by yscale (equal to xscale by default), and z coordinates by zscale (equal to xscale by default). This transformation is added to the top of the transformation stack. 
+
+    .sphere x y z r
+    Draw a sphere centered at (x, y, z) with radius r. 
+
+    .translate dx dy dz
+    or
+    .tran dx dy dz
+    Translate all subsequent coordinates by the specified amount. This transformation is added to the top of the transformation stack. 
+
+    .transparency value
+    Set the transparency of subsequently defined items. The value can range from 0.0 (not transparent) to 1.0 (completely transparent). 
+
+    .vector x1 y1 z1 x2 y2 z2
+    or
+    .v x1 y1 z1 x2 y2 z2
+    Draw a line segment from (x1, y1, z1) to (x2, y2, z2). This command is a shorthand for
+
+        .m x1 y1 z1
+        .d x2 y2 z2 
+
+UCSF Computer Graphics Laboratory / October 2013

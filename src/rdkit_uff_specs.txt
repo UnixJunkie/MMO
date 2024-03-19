@@ -1,0 +1,12 @@
+
+val __init__: mol2:string -> i:int -> unit -> t
+
+val is_valid_UFF: t -> unit -> bool
+
+val is_valid_MMFF: t -> unit -> bool
+
+val update_coords: t -> xs: float array -> ys: float array -> zs: float array -> unit -> unit
+
+val score_UFF: t -> unit -> float
+
+val score_MMFF: t -> unit -> float

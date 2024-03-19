@@ -1,0 +1,4 @@
+
+val __init__: anums: int array -> unit -> t
+
+val score_conf: t -> xs: float array -> ys: float array -> zs: float array -> unit -> float
