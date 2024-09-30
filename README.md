@@ -1,7 +1,6 @@
-# MMO
-Molecular Mechanics in OCaml
+# MMO: Molecular Mechanics in OCaml
 
-A bunch of code for flexible ligand / rigid protein calculations.
+Some code for flexible ligand / rigid protein calculations.
 
 Warning: this code is prototypical in nature.
 Maybe, part of it will be released as a proper standalone library in the long-term
@@ -13,7 +12,7 @@ The dataset that was produced using this software can be downloaded from:
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10682034.svg)](https://doi.org/10.5281/zenodo.10682034)
 
-## to compile the software
+## To compile the software
 
 Tested on Ubuntu Linux 24.04 w/ ocaml-4.14.1.
 
