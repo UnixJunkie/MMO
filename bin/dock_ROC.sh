@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# ROC curve from a MMCLD dock docking_scores.tsv file;
+# ROC curve from a MMO dock docking_scores.tsv file;
 # actives are supposed to have a molecule name prefixed with "active"
 # so that they can be labeled
 
