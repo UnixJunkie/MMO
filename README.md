@@ -38,13 +38,15 @@ This requires mayachemtools and psi4 to be installed.
 
 ## How to score a ligand conformer w/ ANI-2 (approximated QM)
 
+This requires the Python package torchani to be installed:
+
 ```bash
 ~/src/MMO/bin/QM_score_mol2.sh ligand.mol2
 ```
 
 ## How to run a MC simulation in dihedral space to minimize a docked ligand using ANI-2?
 
-If you have compiled the software, you can run:
+If you have compiled the software and you have torchani installed, you can run:
 ```bash
 ./lds -f --no-interp --ligand-only --intra-QM -lig docked_ligand.mol2 \
   -rec prot_rec.pqrs -roi prot_ROI.bild -steps 10k --ene 50 --no-compress --out-dir MC10kQM
