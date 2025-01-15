@@ -4,6 +4,8 @@
 
 (* MOL2 parsing *)
 
+module V3 = Mmo.V3
+
 open Printf
 
 let molecule_tag = "@<TRIPOS>MOLECULE"

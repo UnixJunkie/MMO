@@ -2,6 +2,9 @@
  * Tsuda laboratory, The University of Tokyo,
  * 5-1-5 Kashiwa-no-ha, Kashiwa-shi, Chiba-ken, 277-8561, Japan. *)
 
+module Math = Mmo.Math
+module V3 = Mmo.V3
+
 let cos_pi_div_4 = cos (0.25 *. Math.pi)
 
 let () =

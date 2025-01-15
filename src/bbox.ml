@@ -4,6 +4,8 @@
  *
  * a bounding box *)
 
+module V3 = Mmo.V3
+
 open Printf
 
 type t = { low:  V3.t ; (* lower corner *)

@@ -4,7 +4,10 @@
 
 module FSet = BatSet.Float
 module ISet = BatSet.Int
+module Math = Mmo.Math
 module Rdkit = Rdkit.Rdkit
+module Rot = Mmo.Rot
+module V3 = Mmo.V3
 
 open Printf
 

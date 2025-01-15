@@ -9,6 +9,10 @@
  * Alexa_Super-Fibonacci_Spirals_Fast_Low-\
  * Discrepancy_Sampling_of_SO3_CVPR_2022_paper.html *)
 
+module Math = Mmo.Math
+module Quat = Mmo.Quat
+module Rot = Mmo.Rot
+
 (* both constants are from p4 of the paper *)
 let phi = sqrt 2.0
 let psi = 1.533751168755204288118041

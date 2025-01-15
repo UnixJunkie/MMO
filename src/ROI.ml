@@ -6,6 +6,8 @@
  * probably the binding-site center plus 5 to 10A away.
  * CCDC GOLD uses up to 10A away from the binding-site center. *)
 
+module V3 = Mmo.V3
+
 open Printf
 
 type sphere = { c: V3.t;

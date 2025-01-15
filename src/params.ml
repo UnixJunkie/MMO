@@ -2,6 +2,8 @@
  * Tsuda laboratory, The University of Tokyo,
  * 5-1-5 Kashiwa-no-ha, Kashiwa-shi, Chiba-ken, 277-8561, Japan. *)
 
+module Math = Mmo.Math
+
 (* some simulation defaults *)
 
 (* in radian, whole molecule *)

@@ -2,6 +2,8 @@
  * Tsuda laboratory, The University of Tokyo,
  * 5-1-5 Kashiwa-no-ha, Kashiwa-shi, Chiba-ken, 277-8561, Japan. *)
 
+module V3 = Mmo.V3
+
 type t = { idx: int; pos: V3.t }
 
 let create idx pos =

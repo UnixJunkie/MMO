@@ -4,6 +4,8 @@
  *
  * Minimize ligand conformer using ANI-2 QM approximation *)
 
+module Math = Mmo.Math
+
 open Printf
 
 (* get ready to use some Python bindings *)

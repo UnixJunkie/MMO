@@ -4,6 +4,8 @@
  *
  * 3D grid stored as a 1D array, to store pre-calculated components of a FF *)
 
+module V3 = Mmo.V3
+
 open Printf
 
 type t = BA1.ba1f (* grid data *)

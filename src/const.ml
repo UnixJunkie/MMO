@@ -4,6 +4,8 @@
  *
  * Useful constants *)
 
+module Math = Mmo.Math
+
 (* water radius *)
 let r_H2O = 1.4 (* A *)
 

@@ -2,6 +2,10 @@
  * Tsuda laboratory, The University of Tokyo,
  * 5-1-5 Kashiwa-no-ha, Kashiwa-shi, Chiba-ken, 277-8561, Japan. *)
 
+module Math = Mmo.Math
+module Rot = Mmo.Rot
+module V3 = Mmo.V3
+
 (* ligand rigid body moves *)
 
 (* ROTATION ---------------------------------------------------------------- *)

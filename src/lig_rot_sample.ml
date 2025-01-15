@@ -4,6 +4,9 @@
  *
  * rotational SO(3) sampling of a ligand *)
 
+module Quat = Mmo.Quat
+module Rot = Mmo.Rot
+
 let main () =
   let argc = A.length Sys.argv in
   (if argc <> 4 then
