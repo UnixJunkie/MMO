@@ -22,4 +22,4 @@
            optim_weights filter_ligands qm_ene_post_proc qm_minimize mol2filter
            mol2_clean scissors)
   (libraries bst batteries dolog minicli vector3 line_oriented nlopt
-             bigarray gg genspir unix parany bitv pyml ocamlgraph cpm))
+             bigarray genspir unix parany bitv pyml ocamlgraph cpm))
