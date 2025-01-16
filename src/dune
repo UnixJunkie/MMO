@@ -2,7 +2,7 @@
 ;; installed library
 (library
  (public_name mmo)
- (modules math rot quat V3)
+ (modules math rot quat V3 SO3)
  (name mmo)
  (libraries vector3)
 )
@@ -26,7 +26,7 @@
            move params bbox UFF grid const mol2
            G3D shm ROI test_BA_mmap test_lig_trans test_rot mol2pqrs tests
            xyz2pdb test_rbonds SW ff_score rdkit QM_ene flags mol_graph
-           exit_enter mol2_rename RNG optim SO3 lig_rot_sample place_ligand
+           exit_enter mol2_rename RNG optim lig_rot_sample place_ligand
            analyze_ligands pqrs SS atom bond test_dominate rank_tails
            optim_weights filter_ligands qm_ene_post_proc qm_minimize mol2filter
            mol2_clean scissors)

@@ -9,6 +9,7 @@ module Rdkit = Rdkit.Rdkit
 module Rot = Mmo.Rot
 module TopK = Cpm.TopKeeper
 module V3 = Mmo.V3
+module SO3 = Mmo.SO3
 
 (* get ready to use some Python bindings *)
 let () = Py.initialize ~version:3 ()

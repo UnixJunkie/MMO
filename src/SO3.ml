@@ -9,10 +9,6 @@
  * Alexa_Super-Fibonacci_Spirals_Fast_Low-\
  * Discrepancy_Sampling_of_SO3_CVPR_2022_paper.html *)
 
-module Math = Mmo.Math
-module Quat = Mmo.Quat
-module Rot = Mmo.Rot
-
 (* both constants are from p4 of the paper *)
 let phi = sqrt 2.0
 let psi = 1.533751168755204288118041
@@ -37,7 +33,7 @@ let sample n =
   Array.init n (super_fibonacci (float n))
 
 let rotations (n: int): Rot.t array =
-  A.map (fun quat ->
+  Array.map (fun quat ->
       let axis, angle = Quat.to_axis_angle quat in
       Rot.of_axis_angle axis angle
     ) (sample n)

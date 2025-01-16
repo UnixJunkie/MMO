@@ -6,6 +6,7 @@
 
 module Quat = Mmo.Quat
 module Rot = Mmo.Rot
+module SO3 = Mmo.SO3
 
 let main () =
   let argc = A.length Sys.argv in
